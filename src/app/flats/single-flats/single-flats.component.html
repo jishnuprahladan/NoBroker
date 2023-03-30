@@ -1,0 +1,147 @@
+<div class="pt-5 container">
+    <div class="row">
+        <!-- Blog entries-->
+        <div class="col-lg-8">
+            <!-- Featured blog post-->
+            <div class="card mb-4">
+                <a href="#!"><img class="card-img-top" src="{{flatData.image}}" alt="..." /></a>
+                <div class="card-body">
+                    <div class="small text-muted">January 1, 2022</div>
+                    <h3>price :{{flatData.price}}</h3>
+                    <h2 class="card-title">{{flatData.apartmentName}}</h2>
+                    <p class="card-text">{{flatData.description}}</p>
+
+                </div>
+            </div>
+            <!-- Nested row for non-featured blog posts-->
+            <div class="row">
+                <div class="col-lg-6">
+                    <!-- Blog post-->
+                    <div class="card mb-4">
+                        <a href="#!"><img class="card-img-top" style="height: 250px;" src="{{flatData.image[1]}}"
+                                alt="..." /></a>
+                        <div class="card-body">
+                            <!-- <div class="small text-muted">January 1, 2022</div> -->
+                            <h2 class="card-title h4">Living Room</h2>
+                            <!-- <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis aliquid atque, nulla.</p> -->
+                            <!-- <a class="btn btn-primary" href="#!">Read more →</a> -->
+                        </div>
+                    </div>
+                    <!-- Blog post-->
+                    <div class="card mb-4">
+                        <a href="#!"><img class="card-img-top" style="height: 250px;" src="{{flatData.image[2]}}"
+                                alt="..." /></a>
+                        <div class="card-body">
+                            <!-- <div class="small text-muted">January 1, 2022</div> -->
+                            <h2 class="card-title h4">Work Space</h2>
+                            <!-- <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis aliquid atque, nulla.</p> -->
+                            <!-- <a class="btn btn-primary" href="#!">Read more →</a> -->
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <!-- Blog post-->
+                    <div class="card mb-4">
+                        <a href="#!"><img class="card-img-top" style="height: 250px;" src="{{flatData.image[3]}}"
+                                alt="..." /></a>
+                        <div class="card-body">
+                            <!-- <div class="small text-muted">January 1, 2022</div> -->
+                            <h2 class="card-title h4">Bed Room</h2>
+                            <!-- <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis aliquid atque, nulla.</p> -->
+                            <!-- <a class="btn btn-primary" href="#!">Read more →</a> -->
+                        </div>
+                    </div>
+                    <!-- Blog post-->
+                    <div class="card mb-4">
+                        <a href="#!"><img class="card-img-top" style="height: 250px;" src={{flatData.image[4]}}
+                                alt="..." /></a>
+                        <div class="card-body">
+                            <!-- <div class="small text-muted">January 1, 2022</div> -->
+                            <h2 class="card-title h4">Dining Room</h2>
+                            <!-- <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis aliquid atque, nulla? Quos cum ex quis soluta, a laboriosam.</p> -->
+                            <!-- <a class="btn btn-primary" href="#!">Read more →</a> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Pagination-->
+            <nav aria-label="Pagination">
+                <hr class="my-0" />
+                <!-- <ul class="pagination justify-content-center my-4">
+                    <li class="page-item disabled"><a class="page-link" href="#" tabindex="-1" aria-disabled="true">Newer</a></li>
+                    <li class="page-item active" aria-current="page"><a class="page-link" href="#!">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#!">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#!">3</a></li>
+                    <li class="page-item disabled"><a class="page-link" href="#!">...</a></li>
+                    <li class="page-item"><a class="page-link" href="#!">15</a></li>
+                    <li class="page-item"><a class="page-link" href="#!">Older</a></li>
+                </ul> -->
+
+            </nav>
+        </div>
+        <!-- Side widgets-->
+        <div class="col-lg-4">
+            <!-- Search widget-->
+            <div class="col-md-12 p-1">
+                <table style="width:100% ;height: 520px;">
+                    <caption>Monthly savings</caption>
+                    <tr>
+                        <th class="bg-success text-light">Features</th>
+                        <th class="bg-success text-light">in-flat</th>
+                    </tr>
+                    <tr>
+                        <td>apartmentName</td>
+                        <td>{{flatData.apartmentName}}</td>
+                    </tr>
+                    <tr>
+                        <td>Entertainment zone</td>
+                        <td>{{flatData.EntertainmentZone}}</td>
+                    </tr>
+                    <tr>
+                        <td>available</td>
+                        <td>{{flatData.available}}</td>
+                    </tr>
+                    <tr>
+                        <td>Wifi</td>
+                        <td>{{flatData.Wifi}}</td>
+                    </tr>
+
+                    <tr>
+                        <td>meal options</td>
+                        <td>{{flatData.mealOptions}}</td>
+                    </tr>
+                    <tr>
+                        <td>Value for money</td>
+                        <td>{{flatData.ValueForMoney}}</td>
+                    </tr>
+                    <tr>
+                        <td>Furnished rooms</td>
+                        <td>{{flatData.FurnishedRooms}}</td>
+                    </tr>
+                    <tr>
+                        <td>Laundry services</td>
+                        <td>{{flatData.LaundryServices}}</td>
+                    </tr>
+                    <tr>
+                        <td>Housekeeping</td>
+                        <td>{{flatData.Housekeeping}}</td>
+                    </tr>
+                    <tr>
+                        <td>Gaming zone</td>
+                        <td>{{flatData.GamingZone}}</td>
+                    </tr>
+                </table>
+
+            </div>
+            <hr>
+            <!-- Side widget-->
+            <div class=" card p-4 mb-4">
+                <div class="card-header">Side Widget</div>
+                <h2 class="card-title h4" style="border-bottom: 1px;">Rating :{{flatData.rating}} </h2>
+                <h2 class="card-title h4">Review : {{flatData.review}}</h2>
+                <h2 class="card-title h4">Contact Owner : {{flatData.contact}}</h2>
+
+            </div>
+        </div>
+    </div>
+</div>

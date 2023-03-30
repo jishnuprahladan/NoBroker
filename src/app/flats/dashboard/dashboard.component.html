@@ -1,0 +1,153 @@
+
+<section>
+    <div class=" bg-ligh px-lg-5">
+        <!-- Page Features-->
+        <div class="row justify-content-center gx-lg-4">
+            <div class="col-lg-6 col-xxl-2 mb-5">
+                <div class="card border-0 ">
+                    <a (click)="filters('')">
+                        <div class="card-body text-center pt-0 pt-lg-0">
+                            <div class=""><img style="height:100px;" src="https://i.postimg.cc/MZthP3J5/istockphoto-1160217929-612x612.jpg
+                                    " alt=""></div>
+                            <h5 class="mt-3">all Flats in Kochi</h5>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <!-- <div class="col-lg-6 col-xxl-2 mb-5">
+                <div class="card bg-light p-3 border-0">
+                    <div class="card-body text-center  pt-0 pt-lg-0">
+                        <div class=""><img style="height: 80px;" src="https://i.postimg.cc/7YWjDC6T/single-bed-icon-on-a-white-background-single-hotel-room-icon-bed-for-one-person-illustration-free-ve.webp
+                            " alt=""></div>
+                        <h5 class="mt-3">1 BHK Flats in Kochi</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-xxl-2 mb-5">
+                <div class="card bg-light p-3 border-0">
+                    <div class="card-body text-center  pt-0 pt-lg-0">
+                        <div class=" rounded-5"><img class="rounded-4" style="height: 100px; width: 130px;"
+                                src="https://i.postimg.cc/ZYQpP35R/3-BHK-Flats-For-Sale-in-JLPL-Falcon-View-Mohali-1200x630.jpg"
+                                alt=""></div>
+                        <h5 class="mt-3">2 BHK Flats in Kochi</h5>
+                    </div>
+                </div>
+            </div> -->
+            <div class="col-lg-6 col-xxl-2 mb-5">
+                <div class="card bg-light p-3 border-0">
+                    <a (click)="filters('f')">
+                        <div class="card-body text-center  pt-0 pt-lg-0">
+                            <div class=""><img class="rounded-4" style="height: 100px;"
+                                    src="https://i.postimg.cc/VsWPnLNJ/product-500x500.webp" alt=""></div>
+                            <h5 class="mt-3">Fully Furnished Flats</h5>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-6 col-xxl-2 mb-5">
+                <div class="card bg-light p-3 border-0">
+                    <a (click)="filters('sf')">
+                        <div class="card-body text-center  pt-0 pt-lg-0">
+                            <div class=""><img style="height: 100px;" class="rounded-4"
+                                    src="https://i.postimg.cc/XNB0qSZP/6d72e5e6ed58dc2d22e6fabba21ca6ce.jpg" alt="">
+                            </div>
+                            <h5 class="mt-3">Semi Furnished Flats</h5>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-6 col-xxl-2 mb-5">
+                <div class="card bg-light p-3 border-0 ">
+                    <a (click)="filters('u')">
+                        <div class="card-body text-center pt-0 pt-lg-0">
+                            <div class=""><img style="height: 100px;" class="rounded-4"
+                                    src="https://i.postimg.cc/HxpVHWWF/2-bhk-apartment-for-rent-prahlad-nagar-Ahmedabad-living-room.webp"
+                                    alt=""></div>
+                            <h5 class="mt-3">Unfurnished Flats</h5>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            
+        </div>
+        <button (click)="Logout()" class="btn btn-outline-primary align-items-end">Log Out</button>
+    </div>
+
+</section>
+<hr>
+<section>
+    <div class=" row d-flex pt-3 pb-3 bg-dark">
+        <div *ngFor="let i of filterFlats | filter:searchKey:'apartmentName'" class="container mb-5 col-lg-3">
+            <!-- Blog post-->
+            <div class=" p-2 card mb-5">
+                <div class="d-flex">
+                    <div class="container ">
+                        <div class="row justify-content-center">
+                            <div class="col-md-12  p-1">
+                                <a href="#!"><img class="card-img-top" style="height: 300px;" src="{{i.image}}" alt="..." /></a>
+                                <div class="card-body">
+                                    <div class="small text-muted">January 1, 2022</div>
+                                    <h2 class="card-title h4">{{i.apartmentName}}</h2>
+                                    <p class="card-text">{{i.description}}</p>
+                                </div>
+                            </div>
+                            <!-- <div class="col-md-5 p-1">
+                                <table style="width:100%">
+                                    <caption>Monthly savings</caption>
+                                    <tr>
+                                        <th class="bg-success text-light">Features</th>
+                                        <th class="bg-success text-light">in-flat</th>
+                                    </tr>
+                                    <tr>
+                                        <td>apartmentName</td>
+                                        <td>{{i.apartmentName}}</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Entertainment zone</td>
+                                        <td>{{i.EntertainmentZone}}</td>
+                                    </tr>
+                                    <tr>
+                                        <td>available</td>
+                                        <td>{{i.available}}</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Wifi</td>
+                                        <td>{{i.Wifi}}</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>meal options</td>
+                                        <td>{{i.mealOptions}}</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Value for money</td>
+                                        <td>{{i.ValueForMoney}}</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Furnished rooms</td>
+                                        <td>{{i.FurnishedRooms}}</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Laundry services</td>
+                                        <td>{{i.LaundryServices}}</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Housekeeping</td>
+                                        <td>{{i.Housekeeping}}</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Gaming zone</td>
+                                        <td>{{i.GamingZone}}</td>
+                                    </tr>
+                                </table>
+                                <h2 class="card-title h4">Rating :{{i.rating}} </h2>
+                                <h2 class="card-title h4">Review : {{i.review}}</h2>
+                            </div> -->
+                        </div>
+                    </div>
+                </div>
+                <a class="btn btn-outline-primary" routerLink="/singleFlat/{{i.id}}">Read more →</a>
+            </div>
+        </div>
+    </div>
+</section>

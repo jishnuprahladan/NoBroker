@@ -1,0 +1,77 @@
+<nav class="navbar navbar-dark navbar-expand-lg p-2 bg-dark">
+    <a class="navbar-brand" href="#">NoBroker</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <!-- <li class="nav-item">
+          <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Dropdown
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="#">Action</a>
+            <a class="dropdown-item" href="#">Another action</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Something else here</a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" href="#">Disabled</a>
+        </li> -->
+      </ul>
+     
+    </div>
+    <!-- <div class="">
+        <form class="form-inline d-flex my-2 my-lg-0">
+          <input   class="form-control me-3 mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success me-4 my-2 my-sm-0" type="submit">Search</button>
+        </form>
+    </div > -->
+  </nav>
+<!-- Masthead-->
+<header class="masthead bg-dark ">
+    <div style="height: 500px; width: 100%; background-image: url(https://i.postimg.cc/W3cVM5JV/interior-design.jpg);" class="position-relative">
+        <div class="row justify-content-center">
+            <div class="col-xl-6">
+                <div class="text-center text-white">
+                    <!-- Page heading-->
+                    <h1 class="mb-5 mt-5 p-5">World's Largest NoBrokerage Property Site</h1>
+                    <form >
+                        <!-- Email address input-->
+                        <div class="row">
+                            <div class="col">
+                                <input class="form-control form-control-lg" [(ngModel)]="searchTerm" (keyup)="search($event)" id="emailAddress" name="search" type="text" placeholder="Search Flats" />
+
+                            </div>
+                            <div class="col-auto"><button class="btn btn-primary btn-lg" id="submitButton" type="submit">Search</button></div>
+                        </div>
+                        <!-- Submit success message-->
+                        <!---->
+                        <!-- This is what your users will see when the form-->
+                        <!-- has successfully submitted-->
+                        <!-- <div class="d-none" id="submitSuccessMessage">
+                            <div class="text-center mb-3">
+                                <div class="fw-bolder">Form submission successful!</div>
+                                <p>To activate this form, sign up at</p>
+                                <a class="text-white" href="https://startbootstrap.com/solution/contact-forms">https://startbootstrap.com/solution/contact-forms</a>
+                            </div>
+                        </div> -->
+                        <!-- Submit error message-->
+                        <!---->
+                        <!-- This is what your users will see when there is-->
+                        <!-- an error submitting the form-->
+                        <!-- <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3">Error sending message!</div></div> -->
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
